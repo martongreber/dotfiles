@@ -1,4 +1,5 @@
 set -o vi
+export TERM=xterm
 if [[ $OSTYPE == 'darwin'* ]]; then
 	eval "$(/opt/homebrew/bin/brew shellenv)"
 fi
