@@ -32,6 +32,7 @@ set number relativenumber
 
 let mapleader=","
  " for YCM
+ let g:ycm_extra_conf_globlist = ['~/git/kudu/*']
  nnoremap <leader>jd :YcmCompleter GoTo<CR>
  nnoremap <leader>ji :YcmCompleter GoToImprecise<CR>
 
