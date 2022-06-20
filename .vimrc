@@ -1,38 +1,28 @@
-set nocompatible              " be iMproved, required
-filetype off                  " required
+call plug#begin()
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
+Plug 'junegunn/fzf.vim'
+" Initialize plugin system
+call plug#end()
 
-" set the runtime path to include Vundle and initialize
-set rtp+=~/.vim/bundle/Vundle.vim
-call vundle#begin()
-" alternatively, pass a path where Vundle should install plugins
-"call vundle#begin('~/some/path/here')
-
-" let Vundle manage Vundle, required
-Plugin 'VundleVim/Vundle.vim'
-" Add plugins here
-Plugin 'ycm-core/YouCompleteMe'
-
-" All of your Plugins must be added before the following line
-call vundle#end()            " required
-filetype plugin indent on    " required
-" To ignore plugin indent changes, instead use:
-"filetype plugin on
-"
-" Brief help
-" :PluginList       - lists configured plugins
-" :PluginInstall    - installs plugins; append `!` to update or just :PluginUpdate
-" :PluginSearch foo - searches for foo; append `!` to refresh local cache
-" :PluginClean      - confirms removal of unused plugins; append `!` to auto-approve removal
-"
-" see :h vundle for more details or wiki for FAQ
-" Put your non-Plugin stuff after this line
 
 syntax on
 set number relativenumber
+filetype plugin indent on
+" On pressing tab, insert 2 spaces
+set expandtab
+" show existing tab with 2 spaces width
+set tabstop=2
+set softtabstop=2
+" when indenting with '>', use 2 spaces width
+set shiftwidth=2
+
 
 let mapleader=","
- " for YCM
- let g:ycm_extra_conf_globlist = ['~/git/kudu/*']
- nnoremap <leader>jd :YcmCompleter GoTo<CR>
- nnoremap <leader>ji :YcmCompleter GoToImprecise<CR>
+" for YCM
+let g:ycm_extra_conf_globlist = ['~/git/kudu/*']
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
+nnoremap <leader>ji :YcmCompleter GoToImprecise<CR>
+let g:ycm_auto_hover = ''
+nmap <leader>H <plug>(YCMHover)
 
+nnoremap <silent> <leader>f :FZF<cr>
