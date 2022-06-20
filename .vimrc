@@ -1,6 +1,7 @@
 call plug#begin()
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'ycm-core/YouCompleteMe'
 " Initialize plugin system
 call plug#end()
 
