@@ -24,6 +24,6 @@ let g:ycm_extra_conf_globlist = ['~/git/kudu/*']
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
 nnoremap <leader>ji :YcmCompleter GoToImprecise<CR>
 let g:ycm_auto_hover = ''
-nmap <leader>H <plug>(YCMHover)
+nmap <leader>h <plug>(YCMHover)
 
 nnoremap <silent> <leader>f :FZF<cr>
