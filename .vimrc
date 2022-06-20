@@ -2,11 +2,13 @@ call plug#begin()
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ycm-core/YouCompleteMe'
-" Initialize plugin system
+Plug 'gruvbox-community/gruvbox'
 call plug#end()
 
-
+colorscheme gruvbox  
+set background=dark
 syntax on
+
 set number relativenumber
 filetype plugin indent on
 " On pressing tab, insert 2 spaces
