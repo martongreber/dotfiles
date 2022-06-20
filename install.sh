@@ -11,7 +11,7 @@ if [[ $OSTYPE == 'darwin'* ]]; then
   python3 install.py --all
 # Ubuntu/Debian
 elif [[ -f "/usr/bin/apt-get" ]]; then
-  apt install build-essential cmake python3-dev
+  apt install -y build-essential cmake python3-dev
   cd ~/.vim/plugged/YouCompleteMe
   python3 install.py --all
 fi  
