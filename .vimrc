@@ -3,6 +3,7 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'ycm-core/YouCompleteMe'
 Plug 'gruvbox-community/gruvbox'
+Plug 'tpope/vim-fugitive'
 call plug#end()
 
 colorscheme gruvbox  
